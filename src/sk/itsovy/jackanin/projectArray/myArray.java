@@ -31,6 +31,4 @@ public class myArray {
             i--;
         }while(i>=0);
     }
-
-
 }
