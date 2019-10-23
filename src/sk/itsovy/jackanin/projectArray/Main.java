@@ -11,5 +11,6 @@ public class Main {
         myArray.test4();
          */
         System.out.println(myArray.minmax(60,32,48)[0] +" "+ myArray.minmax(60,32,48)[1]);
+
     }
 }

@@ -100,5 +100,6 @@ public class myArray {
             result[0]=c;
 
         return result;
+
     }
 }
