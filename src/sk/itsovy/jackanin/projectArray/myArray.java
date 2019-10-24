@@ -100,6 +100,26 @@ public class myArray {
             result[0]=c;
 
         return result;
+    }
 
+    public static void test5(){
+        int[] field1=new int[10];
+        field1[0]=1;
+        for (int i=1; i<10; i++){
+            field1[i]=field1[i-1]*2;
+        }
+        for (int i=0; i<10; i++){
+            System.out.print(field1[i]+" ");
+        }
+
+        System.out.println();
+
+        int[] field2=new int[10];
+        for (int i=0; i<10; i++){
+            field2[9-i]=field1[i];
+        }
+        for (int i=0; i<10; i++){
+            System.out.print(field2[i]+" ");
+        }
     }
 }
