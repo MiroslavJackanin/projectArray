@@ -14,7 +14,10 @@ public class Main {
         myArray.test5();
          */
 
-        Person person1=new Person("name", 0);
         Student student1=new Student("Miro", 20, "1N");
+        Teacher teacher1=new Teacher("Onofrej", 87, 420.5);
+        Staff staff1=new Staff("Jozef", 15, "skolnik");
+
+
     }
 }

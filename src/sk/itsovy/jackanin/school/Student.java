@@ -7,7 +7,6 @@ public class Student extends Person{
     public Student(String name, int age, String group) {
         super(name, age);
         this.group = group;
-        System.out.println("...constructed Student");
     }
 
     //GETTER & SETTER

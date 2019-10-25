@@ -7,7 +7,6 @@ public class Teacher extends Person{
     public Teacher(String name, int age, double salary) {
         super(name, age);
         this.salary = salary;
-        System.out.println("...constructed Teacher");
     }
 
     //GETTER & SETTER

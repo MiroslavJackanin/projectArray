@@ -7,7 +7,6 @@ public class Staff extends Person{
     public Staff(String name, int age, String position) {
         super(name, age);
         this.position = position;
-        System.out.println("...constructed Staff");
     }
 
     //GETTER & SETTER
