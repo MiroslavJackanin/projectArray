@@ -1,4 +1,5 @@
 package sk.itsovy.jackanin.projectArray;
+import sk.itsovy.jackanin.school.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,7 +11,10 @@ public class Main {
         myArray.test3();
         myArray.test4();
         System.out.println(myArray.minmax(60,32,48)[0] +" "+ myArray.minmax(60,32,48)[1]);
-         */
         myArray.test5();
+         */
+
+        Person person1=new Person("name", 0);
+        Student student1=new Student("Miro", 20, "1N");
     }
 }
