@@ -1,6 +1,6 @@
 package sk.itsovy.jackanin.school;
 
-public class Teacher extends Person{
+public class Teacher extends Person implements Employee{
     private double salary;
 
     //CONSTRUCTOR

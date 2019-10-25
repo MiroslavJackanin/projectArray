@@ -1,6 +1,6 @@
 package sk.itsovy.jackanin.school;
 
-public class Staff extends Person{
+public class Staff extends Person implements Employee{
     private String position;
 
     //CONSTRUCTOR
@@ -17,4 +17,8 @@ public class Staff extends Person{
         this.position = position;
     }
 
+    //METHODS
+    public double getSalary(){
+        return 580.50;
+    }
 }
