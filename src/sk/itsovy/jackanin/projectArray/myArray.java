@@ -122,4 +122,56 @@ public class myArray {
             System.out.print(field2[i]+" ");
         }
     }
+
+    public static void test6(){
+        int[] b={12,38,47,5,29,16,10,112,48,65,75,9};
+        int size=0;
+        for (int i=0; i<b.length; i++){
+            if (b[i]%3!=0){
+                size++;
+            }
+        }
+        int[] b3n=new int[size];
+        int j=0;
+        for (int i=0; i<b.length; i++){
+            if (b[i]%3!=0){
+                b3n[j]=b[i];
+                System.out.print(b3n[j]+" ");
+                j++;
+            }
+        }
+        System.out.println();
+        int[] c = new int[b.length];
+        for (int i=0; i<b.length; i++){
+            c[i]=b[i];
+            System.out.print(c[i]+" ");
+        }
+
+        int[] d = b.clone();
+
+        int[] e = new int[b.length];
+        System.arraycopy(b,0, e, 0, b.length);
+    }
+
+    public static void test7(){
+        Random rand=new Random();
+        int [] a = new int[20];
+        for (int i=0; i<a.length; i++){
+            int count=0, temp;
+            temp=rand.nextInt(50)+1;
+            for (int j=0; j<i; j++){
+                if (temp==a[j]) {
+                    count=1; break;
+                }
+            }
+            if (count==0)
+                a[i]=temp;
+            else {
+                i--;
+            }
+        }
+        for (int value : a) {
+            System.out.print(value + " ");
+        }
+    }
 }
