@@ -14,12 +14,17 @@ public class Main {
         myArray.test5();
         myArray.test6();
         myArray.test7();
-         */
+        myArray.test8();
+        myArray.test9();
+        myArray.test10();
+        myArray.test11();
+        */
 
         Student student1=new Student("Miro", 20, "1N");
-        Teacher teacher1=new Teacher("Onofrej", 87, 420.5);
-        Staff staff1=new Staff("Jozef", 15, "skolnik");
+        Teacher teacher1=new Teacher("Roland", 87, 420.5);
+        Staff staff1=new Staff("Jozef", 15, "janitor");
 
-        Person.test1();
+        //Person.test1();
+        //Person.test2();
     }
 }

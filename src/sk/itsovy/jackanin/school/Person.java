@@ -58,4 +58,69 @@ public class Person {
                 System.out.println(temp.getName()+" "+temp.getAge()+" "+temp.getSalary());
         }
     }
+
+    public static void test2(){
+        String[] names={"Ivan","Peter","Erik","Zuzana","Leo","Viliam"};
+        for (int i=0; i<names.length; i++){
+            System.out.print(names[i]+" ");
+        }
+        System.out.println();
+        for (String name: names){
+            System.out.print(name+" ");
+        }
+
+        System.out.println("\n    only with 'a' in name");
+        for (int i=0; i<names.length; i++){
+            if (names[i].contains("a") || names[i].contains("A"))
+                System.out.print(names[i]+" ");
+        }
+        System.out.println();
+        for (int i=0; i<names.length; i++){
+            for (int j=0; j<names[i].length(); j++){
+                if (names[i].charAt(j)=='a' || names[i].charAt(j)=='A'){
+                    System.out.print(names[i]+" ");
+                    break;
+                }
+            }
+        }
+
+        System.out.println("\n    only the longest name");
+        int longest=0;
+        int shortest=names[0].length();
+        for (int i=0; i<names.length; i++){
+            if (names[i].length() > longest)
+                longest=names[i].length();
+            if (names[i].length()<shortest)
+                shortest=names[i].length();
+        }
+        for (int i=0; i<names.length; i++){
+            if (names[i].length()==longest)
+                System.out.print(names[i]+" ");
+        }
+
+        System.out.println("\n    only the shortest name");
+        for (int i=0; i<names.length; i++){
+            if (names[i].length()==shortest)
+                System.out.print(names[i]+" ");
+        }
+
+        System.out.println("\n    write upper case");
+        for (int i=0; i<names.length; i++){
+            System.out.print(names[i].toUpperCase()+" ");
+        }
+
+        System.out.println("\n miss vowels");
+        String vowels="aeiou";
+        for (int i=0; i<names.length; i++){
+            String name=names[i];
+            for (int j=0; j<name.length(); j++){
+                String c=String.valueOf(name.charAt(j));
+                if ("AEIOUYaeiouy".contains(c))
+                    System.out.print(".");
+                else
+                    System.out.print(c);
+            }
+            System.out.print("  ");
+        }
+    }
 }

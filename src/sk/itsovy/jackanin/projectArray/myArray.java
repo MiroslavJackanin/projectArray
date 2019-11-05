@@ -1,6 +1,7 @@
 package sk.itsovy.jackanin.projectArray;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class myArray {
 
@@ -173,5 +174,104 @@ public class myArray {
         for (int value : a) {
             System.out.print(value + " ");
         }
+    }
+
+    public static void test8(){
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Enter a word: ");
+        String word=scan.nextLine();
+        int length=word.length();
+        for (int i=length-1; i>=0; i--){
+            System.out.print(word.charAt(i));
+        }
+    }
+
+    public static void test9(){
+        int[] x = new int[]{17, 0, -2, 13, 68, 103, 21, 55, 1};
+        for (int i=0; i<(x.length)-1;i++){
+            for (int j=i+1; j<(x.length); j++){
+                if (x[i]>x[j]){
+                    int temp=x[i];
+                    x[i]=x[j];
+                    x[j]=temp;
+                }
+            }
+        }
+        for (int i=0; i<x.length; i++){
+            System.out.print(x[i]+" ");
+        }
+    }
+
+    public static void test10(){
+        //Array init
+        Random rand=new Random();   //1-80
+        int [] arr = new int[20];
+        for (int i=0; i<arr.length; i++) {
+            int temp = rand.nextInt(80 + 1);
+            int x=0;
+            for (int j = 0; j<i; j++){
+                if (arr[j]==temp){
+                    x=1; break;
+                }
+            }
+            if (x!=1){
+                arr[i]=temp;
+            }else{
+                i--;
+            }
+        }
+
+        //Array sout
+        for (int i=0; i<arr.length; i++){
+            System.out.print(arr[i]+" ");
+        }
+
+        //Array sort
+        for (int i=0; i<(arr.length)-1; i++){
+            for (int j=i+1; j<arr.length; j++){
+                if (arr[i]>arr[j]){
+                    int temp=arr[i];
+                    arr[i]=arr[j];
+                    arr[j]=temp;
+                }
+            }
+        }
+
+        //Array sout
+        System.out.println();
+        for (int i=0; i<arr.length; i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
+
+    public  static void test11(){
+        //Array init
+        String[] arr={"Monika", "Yelizaveta", "Nikoleta", "Denis", "Patrik", "Miroslav", "Vlado", "Martin", "Ladislav", "Jakub", "Damian", "Tibor", "Jakub", "Jakub", "Peter", "Artem"};
+
+        //Array sout
+        for (int i=0; i<arr.length; i++){
+            System.out.print(arr[i]+" ");
+        }
+
+        //Array sort
+        for (int i=0; i<(arr.length)-1; i++){
+            for (int j=i+1; j<arr.length; j++){
+                if (arr[i].compareToIgnoreCase(arr[j]) > 0){
+                    String temp=arr[i];
+                    arr[i]=arr[j];
+                    arr[j]=temp;
+                }
+            }
+        }
+
+        //Array sout
+        System.out.println();
+        for (int i=0; i<arr.length; i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
+
+    public static void test12(){
+
     }
 }
