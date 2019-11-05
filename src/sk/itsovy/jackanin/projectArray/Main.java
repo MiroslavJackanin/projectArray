@@ -18,7 +18,8 @@ public class Main {
         myArray.test9();
         myArray.test10();
         myArray.test11();
-        */
+        myArray.test12();
+         */
 
         Student student1=new Student("Miro", 20, "1N");
         Teacher teacher1=new Teacher("Roland", 87, 420.5);

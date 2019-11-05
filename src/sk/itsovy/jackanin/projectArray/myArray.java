@@ -272,6 +272,40 @@ public class myArray {
     }
 
     public static void test12(){
+        Random rand=new Random();
+        int [] arr = new int[20];
+        for (int i=0; i<arr.length; i++) {
+            int temp = rand.nextInt(80 + 1);
+            int x=0;
+            for (int j = 0; j<i; j++){
+                if (arr[j]==temp){
+                    x=1; break;
+                }
+            }
+            if (x!=1){
+                arr[i]=temp;
+            }else{
+                i--;
+            }
+        }
 
+        for (int i=0; i<arr.length; i++){
+            System.out.print(arr[i]+" ");
+        }
+
+        for (int i=0; i<(arr.length)-1; i++){
+            for (int j=0; j<(arr.length)-i-1; j++){
+                if (arr[j]>arr[j+1]){
+                    int temp=arr[j];
+                    arr[j]=arr[j+1];
+                    arr[j+1]=temp;
+                }
+            }
+        }
+
+        System.out.println();
+        for (int i=0; i<arr.length; i++){
+            System.out.print(arr[i]+" ");
+        }
     }
 }
