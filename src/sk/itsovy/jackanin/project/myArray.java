@@ -3,6 +3,7 @@ package sk.itsovy.jackanin.project;
 import jdk.jshell.spi.ExecutionControl;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class myArray implements ArrayMethods{
     private int arr[];
@@ -93,6 +94,8 @@ public class myArray implements ArrayMethods{
 
     @Override
     public void generateValues(int a, int b, boolean duplicates) {
+        if (a>b)
+            return;
         Random rand=new Random();
         if (duplicates) {
             for (int i = 0; i < size; i++) {
@@ -194,6 +197,10 @@ public class myArray implements ArrayMethods{
 
     @Override
     public void addItemOnPosition(int value, int position) {
+        if (position<=0 || position>size+1){
+            System.out.println("Cannot insert on given position");
+            System.exit(1);
+        }
         int[] array=new int[size+1];
         int temp=0;
         for (int i=0; i<size+1; i++){
@@ -207,6 +214,7 @@ public class myArray implements ArrayMethods{
         for (int i=0; i<array.length; i++){
             System.out.print(array[i]+" ");
         }
+        this.arr=array;
     }
 
     @Override
@@ -220,6 +228,7 @@ public class myArray implements ArrayMethods{
         for (int i=0; i<array.length; i++){
             System.out.print(array[i]+" ");
         }
+        this.arr=array;
     }
 
     @Override
@@ -238,5 +247,57 @@ public class myArray implements ArrayMethods{
         for (int i=0; i<size; i++){
             System.out.print(arr[i]+" ");
         }
+    }
+
+    public static String numberSum(){
+        //String declaration
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter a number:");
+        String add1=scan.nextLine();
+        System.out.println("Enter a number:");
+        String add2=scan.nextLine();
+
+        //Reverse function
+        String reverse = "";
+        for (int i = add1.length(); i>0; i--) {
+            reverse += add1.charAt(i-1);
+        }
+        add1=reverse;
+
+        reverse="";
+        for (int i = add2.length(); i>0; i--) {
+            reverse += add2.charAt(i-1);
+        }
+        add2=reverse;
+
+        //compensate strings
+        while(add1.length()>add2.length())
+            add2 += "0";
+        while(add2.length()>add1.length())
+            add1 += "0";
+
+        //System.out.println(add1);
+        //System.out.println(add2);
+
+        //add
+        String result="";
+        int remainder=0;
+        for (int i=0; i<add1.length() || i<add2.length(); i++){
+            int temp=Character.getNumericValue(add1.charAt(i))+Character.getNumericValue(add2.charAt(i))+remainder;
+            remainder=0;
+            if (temp>9) {
+                remainder = 1;
+                temp=temp%10;
+            }
+            result += Integer.toString(temp);
+        }
+
+        reverse="";
+        for (int i = result.length(); i>0; i--) {
+            reverse += result.charAt(i-1);
+        }
+        result=reverse;
+        System.out.println(result);
+        return result;
     }
 }
