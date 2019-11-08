@@ -2,7 +2,6 @@ package sk.itsovy.jackanin.project;
 
 public class Main {
     public static void main(String[] args) {
-        /*
         int[] myArray1={1,8,56,7,-5,6,-6,0};
         myArray array1=new myArray(myArray1);
 
@@ -49,8 +48,20 @@ public class Main {
         array3.incrementValues();
         System.out.println();
         System.out.println(array3.getItemOnPosition(2));
-         */
 
-        myArray.numberSum();
+        System.out.println("--------------------------");
+        //myArray.numberSum();
+
+
+        System.out.println("------------------------");
+        array1.printArray();
+        array1.generateValues(1,10,false);
+        array1.printArray();
+        array1.reverse();
+        array1.printArray();
+        array1.sort(true);
+        array1.printArray();
+        array1.randomize();
+        array1.printArray();
     }
 }

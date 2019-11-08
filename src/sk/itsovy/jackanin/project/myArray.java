@@ -6,7 +6,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class myArray implements ArrayMethods{
-    private int arr[];
+    private int[] arr;
     private int size;
 
     //CONSTRUCTOR
@@ -276,9 +276,6 @@ public class myArray implements ArrayMethods{
         while(add2.length()>add1.length())
             add1 += "0";
 
-        //System.out.println(add1);
-        //System.out.println(add2);
-
         //add
         String result="";
         int remainder=0;
@@ -299,5 +296,25 @@ public class myArray implements ArrayMethods{
         result=reverse;
         System.out.println(result);
         return result;
+    }
+
+    public void reverse(){
+        for (int i=0; i<size/2; i++){
+            int temp=arr[i];
+            arr[i]=arr[size-1-i];
+            arr[size-1-i]=temp;
+        }
+    }
+
+    public void randomize(){
+        Random rand=new Random();
+
+        for (int i=0; i<2*size; i++){
+            int index1=rand.nextInt(size);
+            int index2=rand.nextInt(size);
+            int temp=arr[index1];
+            arr[index1]=arr[index2];
+            arr[index2]=temp;
+        }
     }
 }
